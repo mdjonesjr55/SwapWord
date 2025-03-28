@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Swap Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Word Swap: Make it More Intelligent</h1>
+    
+    <label for="inputWord">Enter a word:</label>
+    <input type="text" id="inputWord" placeholder="Type a word">
+    <button onclick="swapWord()">Swap Word</button>
+
+    <p id="result"></p>
+
+    <script>
+        function swapWord() {
+            let word = document.getElementById('inputWord').value.toLowerCase();
+            let resultText = '';
+
+            // Simple word swap logic for "intelligent" alternatives
+            const wordSwaps = {
+                "dumb": "inquisitive",
+                "stupid": "insightful",
+                "smart": "genius",
+                "average": "extraordinary",
+                "quick": "efficient",
+                "slow": "methodical",
+                "good": "excellent",
+                "bad": "suboptimal"
+            };
+
+            // Check if the word has a swap
+            if (wordSwaps[word]) {
+                resultText = `The more intelligent version of "${word}" is "${wordSwaps[word]}".`;
+            } else {
+                resultText = `"${word}" does not have a known swap. Try another word.`;
+            }
+
+            // Display the result
+            document.getElementById('result').textContent = resultText;
+        }
+    </script>
+
+</body>
+</html>
