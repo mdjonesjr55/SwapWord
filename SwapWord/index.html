@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Word</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <h1>🔄 Swap Word</h1>
+    <p>Enhance your vocabulary! Enter a word and get suggestions for more alternatives.</p>
+
+    <div class="container">
+        <label for="inputWord"><b>Enter a word:</b></label><br>
+        <input type="text" id="inputWord" placeholder="Type a word">
+        <button onclick="swapWord()">Swap</button>
+        
+        <p id="result"></p>
+        <p id="suggestions" class="suggestions"></p>
+        <p id="error-message"></p>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
